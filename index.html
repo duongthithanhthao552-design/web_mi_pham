@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-egan Beauty</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo animate__animated animate__fadeInDown">
+    T-egan Beauty
+</div>
+<a href="feedback.html">Feedback</a>
+    <nav class="navbar animate__animated animate__fadeIn">
+        <a href="#">Trang chủ</a>
+        <a href="products.html">Sản phẩm</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="#contact">Liên hệ</a>
+    </nav>
+
+    <button class="cart-btn" onclick="toggleCart()">
+        🛒 Giỏ hàng <span id="cart-count">0</span>
+    </button>
+</header>
+
+<section class="hero floating-home">
+    <div class="floating-stickers">
+        <span class="sticker sticker1">🥑</span>
+        <span class="sticker sticker2">🥒</span>
+        <span class="sticker sticker3">🌿</span>
+        <span class="sticker sticker4">🍋</span>
+        <span class="sticker sticker5">🥦</span>
+        <span class="sticker sticker6">🍃</span>
+        <span class="sticker sticker7">🫒</span>
+    </div>
+    <div class="hero-content animate__animated animate__fadeInUp">
+        <span>Mỹ phẩm thuần chay</span>
+        <h1>Chăm sóc làn da bằng vẻ đẹp xanh</h1>
+        <p>Sản phẩm dịu nhẹ, lành tính, thân thiện với môi trường.</p>
+        <a href="trial.html" class="hero-btn">Khám phá ngay</a>
+        <a href="trial.html"
+class="hero-btn animate__animated animate__pulse animate__infinite">
+    </div>
+</section>
+
+<section class="cart-section" id="cart-section">
+    <h2>Giỏ hàng của bạn</h2>
+
+    <div id="cart-list"></div>
+
+    <h3>Tổng tiền: <span id="total-price">0đ</span></h3>
+
+    <button class="checkout-btn" onclick="checkout()">Thanh toán</button>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Nhận ưu đãi mới nhất</h2>
+    <p>Đăng ký để nhận thông tin sản phẩm thuần chay mới.</p>
+
+    <form>
+        <input type="email" placeholder="Nhập email của bạn">
+        <button type="button">Đăng ký</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Vegick Beauty | Vegan Cosmetics Store</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

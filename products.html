@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm - T-egan Beauty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">T-egan Beauty</div>
+
+    <nav class="navbar">
+        <a href="index.html">Trang chủ</a>
+        <a href="products.html">Sản phẩm</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="index.html#contact">Liên hệ</a>
+        <a href="feedback.html">Feedback</a>
+    </nav>
+
+    <button class="cart-btn" onclick="toggleCart()">
+        🛒 Giỏ hàng <span id="cart-count">0</span>
+    </button>
+</header>
+
+<section class="products-page">
+
+    <h1>Danh sách sản phẩm</h1>
+
+    <p class="products-desc">
+        Các dòng mỹ phẩm thuần chay nổi bật tại T-egan Beauty.
+    </p>
+
+    <div class="filter-box">
+    <select id="brand-filter" onchange="filterProducts()">
+    <option value="all">Tất cả thương hiệu</option>
+    <option value="cocoon">Cocoon</option>
+    <option value="vegan">T-egan Beauty</option>
+    <option value="dalba">d'Alba</option>
+    <option value="ncegan">NC-egan</option>
+</select>
+
+<select id="category-filter" onchange="filterProducts()">
+    <option value="all">Tất cả nhu cầu</option>
+    <option value="sua-rua-mat">Sữa rửa mặt</option>
+    <option value="sua-tam">Sữa tắm</option>
+    <option value="cham-soc-toc">Chăm sóc tóc</option>
+    <option value="cham-soc-da">Chăm sóc da</option>
+    <option value="my-pham">Mỹ phẩm</option>
+    <option value="nuoc-hoa">Nước hoa</option>
+</select>
+</div>
+
+    <div class="product-list">
+
+        <div class="product-card" data-brand="cocoon" data-category="sua-tam">
+            <img src="images/product4.png" alt="">
+            <h3>Gel tắm bí đao Cocoon</h3>
+            <p>Làm sạch dịu nhẹ, hỗ trợ giảm mụn lưng.</p>
+            <span>165.000đ</span>
+            <button onclick="addToCart('Gel tắm bí đao Cocoon', 165000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product-card" data-brand="cocoon" data-category="cham-soc-da">
+            <img src="images/product3.png" alt="">
+            <h3>Bộ dưỡng Avocado</h3>
+            <p>Dưỡng ẩm và giúp da mềm mịn hơn.</p>
+            <span>320.000đ</span>
+            <button onclick="addToCart('Bộ dưỡng Avocado', 320000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+         <div class="product-card" data-brand="cocoon" data-category="sua-rua-mat">
+            <img src="images/product6.png" alt="">
+            <h3>Gel rửa mặt bí đao</h3>
+            <p>Chăm sóc da thuần chay cao cấp.</p>
+            <span>199.000đ</span>
+            <button onclick="addToCart('Gel rửa mặt', 390000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product-card" data-brand="cocoon" data-category="sua-rua-mat">
+            <img src="images/cocoon1.png" alt="">
+            <h3>Tẩy tế bào chết cơ thể cà phê Đắk Lắk</h3>
+            <p>Chăm sóc da thuần chay cao cấp.</p>
+            <span>149.000đ</span>
+            <button onclick="addToCart('Tẩy tế bào chết cơ thể cà phê Đắk Lắk', 390000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product-card" data-brand="cocoon" data-category="sua-rua-mat">
+            <img src="images/cocoon2.png" alt="">
+            <h3>Nước cân bằng da Hậu Giang</h3>
+            <p>Chăm sóc da thuần chay cao cấp.</p>
+            <span>197.000đ</span>
+            <button onclick="addToCart('Nước cân bằng da Hậu Giang', 390000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+         <div class="product-card" data-brand="cocoon" data-category="sua-rua-mat">
+            <img src="images/cocoon3.png" alt="">
+            <h3>Nước tẩy trang sen Hậu Giang</h3>
+            <p>Chăm sóc da thuần chay cao cấp.</p>
+            <span>209.000đ</span>
+            <button onclick="addToCart('Nước tẩy trang sen Hậu Giang', 390000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product-card" data-brand="cocoon" data-category="sua-rua-mat">
+            <img src="images/cocoon4.png" alt="">
+            <h3>Combo chăm sóc tóc gội-xả-dưỡng tinh chất bưởi</h3>
+            <p>Chăm sóc da thuần chay cao cấp.</p>
+            <span>616.000đ</span>
+            <button onclick="addToCart('Combo chăm sóc tóc gội-xả-dưỡng tinh chất bưởi', 390000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product-card" data-brand="cocoon" data-category="sua-rua-mat">
+            <img src="images/cocoon5.png" alt="">
+            <h3>Tẩy tế bào chết da mặt cà phê Đắk Lắk</h3>
+            <p>Chăm sóc da thuần chay cao cấp.</p>
+            <span>115.000đ</span>
+            <button onclick="addToCart('Tẩy tế bào chết da mặt cà phê Đắk Lắk', 390000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+         <div class="product-card" data-brand="cocoon" data-category="sua-rua-mat">
+            <img src="images/cocoon6.png" alt="">
+            <h3>Combo gel tắm đường thốt nốt An Giang</h3>
+            <p>Chăm sóc da thuần chay cao cấp.</p>
+            <span>212.000đ</span>
+            <button onclick="addToCart('Combo gel tắm đường thốt nốt An Giang', 390000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product-card" data-brand="cocoon" data-category="sua-rua-mat">
+            <img src="images/cocoon7.png" alt="">
+            <h3>Kem dưỡng dạng thạch bí đao giảm dầu mụn</h3>
+            <p>Chăm sóc da thuần chay cao cấp.</p>
+            <span>135.000đ</span>
+            <button onclick="addToCart('Kem dưỡng dạng thạch bí đao giảm dầu mụn', 390000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+        
+
+
+
+
+
+
+
+
+
+        <div class="product-card" data-brand="vegan" data-category="sua-tam">
+            <img src="images/product2.png" alt="">
+            <h3>Winter Melon Shower Gel</h3>
+            <p>Chiết xuất bí đao và bạc hà mát dịu.</p>
+            <span>190.000đ</span>
+            <button onclick="addToCart('Winter Melon Shower Gel', 190000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+       <div class="product-card" data-brand="vegan" data-category="cham-soc-da">
+            <img src="images/product1.png" alt="">
+            <h3>Serum rau má</h3>
+            <p>Làm dịu và phục hồi làn da nhạy cảm.</p>
+            <span>245.000đ</span>
+            <button onclick="addToCart('Serum rau má', 245000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+       
+
+       <div class="product-card" data-brand="vegan" data-category="cham-soc-da">
+            <img src="images/product5.png" alt="">
+            <h3>Combo Vegan Skin</h3>
+            <p>Chăm sóc da thuần chay cao cấp.</p>
+            <span>390.000đ</span>
+            <button onclick="addToCart('Combo Vegan Skin', 390000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+       
+
+        
+
+        <div class="product-card" data-brand="dalba" data-category="my-pham">
+            <img src="images/product8.png" alt="">
+            <h3>d'Alba</h3>
+            <p>Thương hiệu thuần chay cao cấp Hàn Quốc.</p>
+            <span>356.000đ</span>
+            <button onclick="addToCart('d Alba ', 390000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+         <div class="product-card" data-brand="dalba" data-category="sua-rua-mat">
+            <img src="images/product9.png" alt="">
+            <h3> Dầu rửa mặt d'Alba</h3>
+            <p>Dầu rửa mặt d'Alba sạch sâu dịu nhẹ lành tính cho da nhạy cảm.</p>
+            <span>266.000đ</span>
+            <button onclick="addToCart('Dầu rửa mặt d Alba', 390000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product-card" data-brand="dalba" data-category="sua-rua-mat">
+            <img src="images/dalba1.png" alt="">
+            <h3> Serum dạng xịt nấm Truffle trắng căng bóng da</h3>
+            <p>Dầu rửa mặt d'Alba sạch sâu dịu nhẹ lành tính cho da nhạy cảm.</p>
+            <span>349.000đ</span>
+            <button onclick="addToCart('Serum dạng xịt nấm Truffle trắng căng bóng da', 390000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product-card" data-brand="dalba" data-category="sua-rua-mat">
+            <img src="images/dalba2.png" alt="">
+            <h3> Xịt khoáng chống lão hóa, sáng da, cải thiện lỗ chân lông</h3>
+            <p>Dầu rửa mặt d'Alba sạch sâu dịu nhẹ lành tính cho da nhạy cảm.</p>
+            <span>421.000đ</span>
+            <button onclick="addToCart('Xịt khoáng chống lão hóa, sáng da, cải thiện lỗ chân lông', 390000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product-card" data-brand="dalba" data-category="sua-rua-mat">
+            <img src="images/dalba3.png" alt="">
+            <h3> Kem chống nắng</h3>
+            <p>Dầu rửa mặt d'Alba sạch sâu dịu nhẹ lành tính cho da nhạy cảm.</p>
+            <span>360.000đ</span>
+            <button onclick="addToCart('Kem chống nắng', 390000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="product-card" data-brand="ncegan" data-category="nuoc-hoa">
+            <img src="images/product7.png" alt="">
+            <h3>Nước hoa thiên nhiên</h3>
+            <p>Cao cấp và giữ hương lâu 8-12 tiếng.</p>
+            <span>599.000đ</span>
+            <button onclick="addToCart('Nước hoa thiên nhiên', 390000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product-card" data-brand="ncegan" data-category="nuoc-hoa">
+            <img src="images/nh1.png" alt="">
+            <h3>Nước hoa nam Dior SAUVAGE EDP 100ml</h3>
+            <p>Hương thơm nam tính và ấm áp, lý tưởng cho những buổi tối lãng mạn.</p>
+            <span>3.480.000đ</span>
+            <button onclick="addToCart('Nước hoa nam Dior SAUVAGE EDP 100ml', 390000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product-card" data-brand="ncegan" data-category="nuoc-hoa">
+            <img src="images/nh2.png" alt="">
+            <h3>Nước Hoa Nữ Parfums De Marly Delina EDP</h3>
+            <p>Thu – Đông, các buổi tiệc, hẹn hò hoặc khi muốn gây ấn tượng sâu đậm.</p>
+            <span>690.000đ</span>
+            <button onclick="addToCart('Nước Hoa Nữ Parfums De Marly Delina EDP', 390000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product-card" data-brand="ncegan" data-category="nuoc-hoa">
+            <img src="images/nh3.png" alt="">
+            <h3> Nước hoa Dior Miss Dior EDT 100ml</h3>
+            <p>Thương hiệu: Dior.</p>
+            <span>2.700.000đ</span>
+            <button onclick="addToCart('Nước hoa Dior Miss Dior EDT 100ml', 390000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product-card" data-brand="ncegan" data-category="nuoc-hoa">
+            <img src="images/nh4.png" alt="">
+            <h3> Nước Hoa Charme Cool Water 100ml</h3>
+            <p>Xa-Toả hương trong vòng bán kính 2 mét thời điểm khuyên dùng: Ngày, Đêm, Thu, Đông, xuân, hạ - mùi hương đặc trưng.</p>
+            <span>960.000đ</span>
+            <button onclick="addToCart('Nước Hoa Charme Cool Water 100ml', 390000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product-card" data-brand="ncegan" data-category="nuoc-hoa">
+            <img src="images/nh5.png" alt="">
+            <h3> Nước hoa YSL Libre L'Absolu Platine 2023 EDP 90ml</h3>
+            <p>Nước hoa YSL Libre L’Absolu Platine 2023 EDP.</p>
+            <span>3.450.000đ</span>
+            <button onclick="addToCart('Nước hoa YSL Libre LAbsolu Platine 2023 EDP 90ml', 390000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+
+
+    </div>
+
+</section>
+
+<section class="cart-section" id="cart-section">
+    <h2>Giỏ hàng của bạn</h2>
+
+    <div id="cart-list"></div>
+
+    <h3>Tổng tiền: <span id="total-price">0đ</span></h3>
+
+    <button class="checkout-btn" onclick="checkout()">
+        Thanh toán
+    </button>
+</section>
+
+<footer>
+    <p>© 2026 T-egan Beauty | Vegan Cosmetics Store</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

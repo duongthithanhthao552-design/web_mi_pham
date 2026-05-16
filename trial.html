@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dùng thử sản phẩm - T-egan Beauty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">T-egan Beauty</div>
+
+    <nav class="navbar">
+        <a href="index.html">Trang chủ</a>
+        <a href="index.html#products">Sản phẩm</a>
+        <a href="index.html#about">Giới thiệu</a>
+        <a href="index.html#contact">Liên hệ</a>
+    </nav>
+</header>
+
+<section class="trial-hero">
+    <div>
+        <h1>Trải nghiệm sản phẩm trước khi mua</h1>
+        <p>
+            Khách hàng có thể dùng thử các mẫu mỹ phẩm thuần chay để cảm nhận độ phù hợp
+            trước khi quyết định mua sản phẩm chính thức.
+        </p>
+    </div>
+</section>
+
+<section class="trial-section">
+    <h2>Mẫu dùng thử nổi bật</h2>
+
+    <div class="trial-list">
+
+        <div class="trial-card">
+            <img src="images/product1.png" alt="Mẫu thử gel tắm bí đao">
+            <h3>Mẫu thử Gel tắm bí đao</h3>
+            <p>Phù hợp cho khách muốn trải nghiệm sản phẩm làm sạch cơ thể dịu nhẹ.</p>
+            <span>Phí mẫu thử: 0đ</span>
+            <button onclick="orderSample('Mẫu thử Gel tắm bí đao')">Đặt mẫu thử</button>
+        </div>
+
+        <div class="trial-card">
+            <img src="images/product3.png" alt="Mẫu thử serum rau má">
+            <h3>Mẫu thử Serum rau má</h3>
+            <p>Giúp khách kiểm tra độ phù hợp với làn da nhạy cảm, dễ kích ứng.</p>
+            <span>Phí mẫu thử: 0đ</span>
+            <button onclick="orderSample('Mẫu thử Serum rau má')">Đặt mẫu thử</button>
+        </div>
+
+        <div class="trial-card">
+            <img src="images/product4.png" alt="Mẫu thử bộ dưỡng da">
+            <h3>Mẫu thử Bộ dưỡng da Avocado</h3>
+            <p>Dành cho khách muốn trải nghiệm khả năng cấp ẩm trước khi mua full-size.</p>
+            <span>Phí mẫu thử: 0đ</span>
+            <button onclick="orderSample('Mẫu thử Bộ dưỡng da Avocado')">Đặt mẫu thử</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="shipping-section">
+    <h2>Đặt mẫu dùng thử tại nhà</h2>
+
+    <p>
+        Nếu khách hàng không thể đến trực tiếp cửa hàng để trải nghiệm sản phẩm,
+        khách có thể đặt mẫu dùng thử giao về nhà.
+    </p>
+
+    <div class="shipping-box">
+        <div>
+            <h3>Nội thành TP. HCM</h3>
+            <p>Phí ship cố định cho mỗi mẫu thử:</p>
+            <strong>20.000 VNĐ</strong>
+        </div>
+
+        <div>
+            <h3>Các tỉnh khác trên toàn quốc</h3>
+            <p>Phí ship cố định cho mỗi mẫu thử:</p>
+            <strong>30.000 VNĐ</strong>
+        </div>
+    </div>
+
+    <form class="sample-form" onsubmit="submitSampleOrder(event)">
+        <h3>Thông tin đặt mẫu thử</h3>
+
+        <input type="text" id="customer-name" placeholder="Họ và tên" required>
+        <input type="tel" id="customer-phone" placeholder="Số điện thoại" required>
+        <input type="text" id="customer-address" placeholder="Địa chỉ nhận hàng" required>
+
+        <select id="customer-area" required>
+            <option value="">Chọn khu vực giao hàng</option>
+            <option value="hcm">Nội thành TP. HCM - 20.000 VNĐ/mẫu</option>
+            <option value="province">Tỉnh khác - 30.000 VNĐ/mẫu</option>
+        </select>
+
+        <button type="submit">Gửi yêu cầu đặt mẫu thử</button>
+
+        <p id="sample-message"></p>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 T-egan Beauty | Vegan Cosmetics Store</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
