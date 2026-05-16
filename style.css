@@ -769,3 +769,53 @@ footer {
     }
 }
 
+.lab-container {
+    min-height: 100vh;
+    background: #050816;
+    padding: 60px 8%;
+}
+
+.lab-container h1 {
+    color: white;
+    font-size: 52px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.lab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+}
+
+.lab-card {
+    background: #f5f5f5;
+    border-radius: 18px;
+    padding: 28px;
+    min-height: 230px;
+    transition: 0.3s;
+}
+
+.lab-card:hover {
+    transform: translateY(-6px);
+}
+
+.lab-card h2 {
+    font-size: 34px;
+    margin-bottom: 28px;
+    color: black;
+}
+
+.lab-card a {
+    display: block;
+    margin-bottom: 18px;
+    text-decoration: none;
+    color: #555;
+    font-size: 22px;
+    transition: 0.2s;
+}
+
+.lab-card a:hover {
+    color: #496b3a;
+    transform: translateX(5px);
+}
